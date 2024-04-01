@@ -11,6 +11,8 @@ This repositorie was created to aid me during my studies of MoT protocol + LQE.
 
 ### ESP32-Arduino-MoT
 
+#### RSSI
+
 Two main LQE are the RSSI reading and the LQE. Starting by the RSSI, the first challenge is to pass it correctly to the N3.
 
 ```cpp
@@ -57,7 +59,15 @@ void Phy_dBm_to_Radiuino(){// Funcao que transforma RSSI em dBm da leitura do Wi
 
 ![image](https://github.com/Rafaelatff/ESP32-Arduino-MoT/assets/58916022/8da39440-aab3-4606-a184-f1e0ef1b8a5c)
 
+#### MoT Libraries
 
+To make the libaries, that already work on the Arduino IDE also work on the Visual Studio Code IDE, I have to do two things:
+
+First, prepare the libs according to documentation (README file inside the lib tree):
+
+![image](https://github.com/Rafaelatff/ESP32-Arduino-MoT/assets/58916022/62afe583-1c8f-469a-8d81-73ee3780eb17)
+
+Then I had to make use of the `extern` to [Share A Global Variable Across Multiple Files](https://www.youtube.com/watch?v=Wqm1tSzmqkY).
 
 
 ### N3_Python_RSSI_PSR.py
